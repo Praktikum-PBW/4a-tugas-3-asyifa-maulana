@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <style>
+        fieldset{
+            background-color: #7C99AC;
+            border-radius: 5px;
+        }
+        .field{
+            background-color: #92A9BD;
+            border-radius: 5px;
+            padding: 7px;
+            margin: 1px;
+            width: 373px;
+            height: 50px;
+        }
+        .fieldtext{
+            width: 365px;
+            height: 20px;
+            border-radius: 5px;
+        }
+        #fhasil{
+            background-color: #92A9BD;
+            border-radius: 5px;
+            padding: 7px;
+            margin: 1px;
+            width: 373px;
+            height: 50px;
+        }
+        .label{
+            padding-left: 7px;
+        }
+        #button{
+            margin-left: 23%;
+        }
+        .bt{
+            width: 70px;
+            height: 27px;
+            margin: 2px;
+            border-radius: 4px;
+            background-color: #92A9BD;
+        }
+    </style>
+</head>
+<body>
+    <fieldset style="width:400px; height: 410px;">
+        <div>
+            <h3 align="center" style="color: #ffffff;">KALKULATOR</h3>
+        </div>
+        <div class="field">
+            <label class="label" for="angka1">Masukkan angka pertama: </label><br>
+            <input class="fieldtext" type="text" name="angka1" id="angka1">
+        </div>
+        <br><br>
+        <div class="field">
+            <label class="label" for="angka2">Masukkan angka kedua: </label><br>
+            <input class="fieldtext" type="text" name="angka2" id="angka2">
+        </div>
+        <br>
+        <div id="button">
+            <input class="bt" type="button" value="Tambah" id="tambah">
+            <input class="bt" type="button" value="Kurang" id="kurang">
+            <input class="bt" type="button" value="Kali" id="kali"><br><br>
+            <input class="bt" type="button" value="Bagi" id="bagi">
+            <input class="bt" type="button" value="Modulus" id="modulus">
+            <input class="bt" type="button" value="Clear" id="clear">
+        </div><br>
+        <div id="fhasil">
+            <label class="label" for="hasil">Hasil :</label>
+            <input class="fieldtext" type="text" name="hasil" id="hasil" disabled="disabled">
+        </div>
+    </fieldset>
+    <script src="kalkulator.js"></script>
+</body>
+</html>

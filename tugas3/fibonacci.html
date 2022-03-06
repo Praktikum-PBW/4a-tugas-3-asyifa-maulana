@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+    <style>
+        fieldset{
+            background-color: #7C99AC;
+            border-radius: 5px;
+        }
+        #field{
+            background-color: #92A9BD;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        #nilai{
+            width: 230px;
+            border-radius: 5px;
+        }
+        #bt{
+            width: 70px;
+            height: 25px;
+            border-radius: 3px;
+            margin-left: 15px;
+        }
+        .fieldtext{
+            background-color: #92A9BD;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 5px;
+            width: 570px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+        <fieldset style="width: 600px; height: 230px;">
+            <h3 align="center">Deret Fibonacci</h3>
+            <div id="field">
+                <label for="nilai">Masukkan Jumlah Deret Bilangan Yang diinginkan :</label>
+            <input type="text" name="nilai" id="nilai" >
+            </div>
+            
+        
+        <input type="button" value="Hitung" id="bt" onclick="fibonacci(nilai.value)">
+        <input type="button" value="Hapus" id="bt" onclick="location.reload()">
+        <div id="field">
+            <p>Hasil : </p>
+            <p id="hasil"></p>
+            
+        </div>
+            
+        
+        </fieldset>
+    <script>
+        
+        let fibonacci = function (n){
+            
+            if (n==2) {
+                let loop = [0,1];
+                document.getElementById("hasil").innerHTML = loop;
+                return loop;
+            } else if(n==1) {
+                let satu = [0];
+                document.getElementById("hasil").innerHTML = satu;
+                return satu;
+            } else {
+                let s = fibonacci(n - 1);
+                s.push(s[s.length - 1] + s[s.length - 2]);
+                document.getElementById("hasil").innerHTML =s;
+                return s;
+            }
+
+        };
+    </script>
+</body>
+</html>
